@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -60,8 +61,6 @@
     background-color: $accent;
   }
 }
-
-
 
 .footer {
   background-color: $bg;
@@ -138,12 +137,8 @@
     }
   }
   &__form-btn {
-    padding: 13px 26px;
     border: none;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-    text-transform: uppercase;
-    color: #fff;
-    background-color: $accent;
+    @extend %btn;
     cursor: pointer;
   }
 }
@@ -158,6 +153,80 @@
     display: inline;
     margin-left: 25px;
     vertical-align: middle;
+  }
+}
+
+.top-slider {
+  padding-top: 65px;
+  padding-bottom: 44px;
+  background-color: $bg;
+  background-image: url('../images/top-slider-bg.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  &__container {
+    max-width: 1560px;
+  }
+  &__content {
+    padding-left: 175px;
+    padding-top: 125px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: 35px;
+    max-width: 670px;
+    @extend %roboto-700;
+    font-size: 58px;
+    line-height: 68px;
+    color: $title;
+  }
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+  &__link {
+    padding: 14px 35px;
+    @extend %btn;
+  }
+  .slick-dots {
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 0 5px;
+      line-height: 0;
+      button {
+        position: relative;
+        padding: 0;
+        width: 28px;
+        height: 28px;
+        font-size: 0;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        background-color: transparent;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $default;
+        }
+      }
+      &.slick-active {
+        button {
+          border-color: $accent;
+          &::before {
+            background-color: $accent;
+          }
+        }
+      }
+    }
   }
 }
 
