@@ -21,11 +21,10 @@ $bg: #f6f6f6;
 }
 
 %btn {
-  padding: 13px 26px;
+  padding: 12px 26px;
   @extend %roboto-400;
   text-transform: uppercase;
-  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
   color: #fff;
   background-color: $accent;
-
+  box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
 }
