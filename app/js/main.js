@@ -1,5 +1,20 @@
 $(function() {
 
+  $('.product-slide__thumbs').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumbs',
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
   //filter btn change active class
   $('.shop-content__filter-btn').on('click', function () {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
@@ -15,7 +30,7 @@ $(function() {
   });
 
   //styler select in shop-filter
-  $('.select-style').styler();
+  $('.select-style, .product-one__item-num').styler();
 
   //ionRangeSlider in filter price on Shop page
   $('.filter-price__input').ionRangeSlider({
