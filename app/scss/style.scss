@@ -1362,7 +1362,6 @@
   padding-top: 110px;
   &__top {
     margin-bottom: 40px;
-
     border-bottom: 1px solid #f0f0f0;
   }
   &__top-item {
@@ -1723,6 +1722,137 @@
       height: 16px;
       background-image: url('../images/icons/calendar.svg');
     }
+  }
+}
+
+.blog-one {
+  &__left-img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  &__right-img {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  &__text {
+    margin-top: -1px;
+    padding: 30px;
+    border: 1px solid #ececec;
+    border-top: none;
+    h4 {
+      margin: 25px 0;
+      color: $title;
+      font-size: 22px;
+      @extend %roboto-500;
+    }
+    p {
+      margin: 25px 0;
+    }
+    blockquote {
+      margin: 25px 0;
+      padding: 35px;
+      @extend %roboto-400;
+      font-size: 22px;
+      border-left: 3px solid $accent;
+      color: $title;
+      background-color: $bg;
+    }
+  }
+  &__info {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__info-link {
+    position: relative;
+    margin-right: 30px;
+    padding-left: 28px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+  &__info-link--comment::before {
+    top: 3px;
+    background-image: url('../images/icons/comment.svg');
+  }
+  &__info-link--author::before {
+    top: 2px;
+    background-image: url('../images/icons/user-blog.svg');
+  }
+  &__form-title {
+    margin: 35px 0 25px;
+    text-transform: uppercase;
+    @extend %roboto-700;
+    font-size: 24px;
+    color: $title;
+  }
+  .comments-form {
+    border-bottom: none;
+  }
+  .comments-form__text-input {
+    width: 370px;
+  }
+  .comments__title {
+    margin-bottom: 25px;
+    @extend %roboto-700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $title;
+  }
+  &__box {
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__tags,
+  &__share {
+    span {
+      @extend %roboto-500;
+      text-transform: uppercase;
+      color: $title;
+    }
+  }
+  &__share {
+    a {
+      margin-right: 12px;
+      vertical-align: middle;
+      &:hover {
+        path {
+          fill: $accent;
+        }
+      }
+      path {
+        fill: #727272;
+      }
+    }
+  }
+  &__author {
+    display: flex;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+  }
+  &__author-img {
+    margin-right: 30px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+  &__author-name {
+    margin-bottom: 24px;
+    @extend %roboto-500;
+    font-size: 22px;
+    color: $title;
+  }
+  &__author-text {
+
   }
 }
 
