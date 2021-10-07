@@ -124,8 +124,12 @@
   &__text {
     margin-bottom: 25px;
   }
+  &__form {
+    display: flex;
+  }
   &__form-input {
     padding: 12px 12px 15px;
+    margin-right: 10px;
     max-width: 320px;
     width: 100%;
     border: none;
