@@ -18,6 +18,7 @@
   &__title {
     margin-bottom: 40px;
     font-size: 48px;
+    line-height: 52px;
     @extend %roboto-700;
     color: #28384f;
   }
@@ -43,6 +44,9 @@
   &__filters {
     margin-right: 30px;
     width: 370px;
+  }
+  &__filter-btn {
+    display: none;
   }
 }
 
